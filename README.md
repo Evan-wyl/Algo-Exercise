@@ -1,2 +1,2 @@
 # algo-exercise
-Data structure and algorithm
+Data structure and Algorithm
