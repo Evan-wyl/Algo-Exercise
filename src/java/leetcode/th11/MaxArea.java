@@ -1,4 +1,4 @@
-package java.leetcode;
+package java.leetcode.th11;
 
 /**
  * @fileName: MaxArea.java
@@ -11,6 +11,10 @@ public class MaxArea {
 
 // 11. 盛最多水的容器
 // https://leetcode.cn/problems/container-with-most-water/description/
+
+/**
+ * 固定一个边，变化可能存在大面积的板
+ */
 class Solution {
     public int maxArea(int[] height) {
         int len = height.length;
