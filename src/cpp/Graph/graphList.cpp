@@ -1,11 +1,11 @@
 #include <iostream>
 #include <vector>
 
-class GraphbyList{
+class Graph{
 private:
     std::vector<std::vector<int>> adjacencyList;
 public:
-    GraphbyList(int numVertices) : adjacencyList(numVertices){}
+    Graph(int numVertices) : adjacencyList(numVertices){}
 
     void addEdge(int src, int dest){
         adjacencyList[src].push_back(dest);

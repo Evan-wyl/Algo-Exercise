@@ -1,12 +1,12 @@
 #include <iostream>
 #include <vector>
 
-class GraphbyMatrix{
+class Graph{
 private:
     std::vector<std::vector<int>> adjaencyMatrix;
 public:
     
-    GraphbyMatrix(int numVertices) : adjaencyMatrix(numVertices, std::vector<int>(numVertices, 0)){}
+    Graph(int numVertices) : adjaencyMatrix(numVertices, std::vector<int>(numVertices, 0)){}
     
     void addEdge(int src, int dest){
         adjaencyMatrix[src][dest] = 1;
