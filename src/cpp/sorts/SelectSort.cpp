@@ -1,11 +1,9 @@
 #include<iostream>
 #include<vector>
 
-using namespace std;
-
 class SelectSort{
 public:
-    void selectSort(vector<int> arr){
+    void selectSort(std::vector<int>& arr){
         int len = arr.size();
         if (len <= 1)
         {

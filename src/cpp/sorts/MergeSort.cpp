@@ -1,16 +1,14 @@
 #include<iostream>
 #include<vector>
 
-using namespace std;
-
 class MergeSort{
 public:
-    void mergeSort(vector<int> arr){
+    void mergeSort(std::vector<int>& arr){
         int len = arr.size();
         mergeInternallySort(arr, 0, len - 1);
     }
 
-    void mergeInternallySort(vector<int> arr, int k, int l){
+    void mergeInternallySort(std::vector<int>& arr, int k, int l){
         if(k >= l){
             return;
         }
@@ -19,8 +17,8 @@ public:
         mergeInternallySort(arr, pos + 1, l);
         merge(arr, k, pos, l);
     }
-    void merge(vector<int> arr, int k, int pos, int l){
-        vector<int> tmp(l - k + 1);
+    void merge(std::vector<int>& arr, int k, int pos, int l){
+        std::vector<int> tmp(l - k + 1);
         int i  = k;
         int j = pos + 1;
         int m = 0;

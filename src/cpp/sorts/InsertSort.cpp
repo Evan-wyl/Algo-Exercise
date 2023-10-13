@@ -1,11 +1,9 @@
 #include<iostream>
 #include<vector>
 
-using namespace std;
-
 class InsertSort{
 public:
-    void insertSort(vector<int> arr){
+    void insertSort(std::vector<int>& arr){
         int len = arr.size();
         if (len <= 1)
         {

@@ -2,11 +2,9 @@
 #include <vector>
 #include <queue>
 
-using namespace std;
-
 class Graph{
     int V;
-    vector<vector<int>> adj;
+    std::vector<std::vector<int>> adj;
 public:
     
     Graph(int V){
@@ -19,14 +17,14 @@ public:
         adj[w].push_back(v);
     }
 
-    vector<int> BFS(int s, int d){
-        vector<bool> isVisited(V, false);
-        queue<int> q;
+    std::vector<int> BFS(int s, int d){
+        std::vector<bool> isVisited(V, false);
+        std::queue<int> q;
 
         isVisited[s] = true;
         q.push(s);
 
-        vector<int> path(V, -1);
+        std::vector<int> path(V, -1);
 
         while (!q.empty())
         {
@@ -48,3 +46,8 @@ public:
         return path;
     }
 };
+
+int main(){
+    std::priority_queue<int, std::vector<int>, std::greater<int>> pq;
+    return 0;
+}

@@ -1,11 +1,9 @@
 #include<iostream>
 #include<vector>
 
-using namespace std;
-
 class BubbleSort{
 public:
-    void bubbleSort(vector<int> arr){
+    void bubbleSort(std::vector<int>& arr){
         int len = arr.size();
         if(len <= 1){
             return;

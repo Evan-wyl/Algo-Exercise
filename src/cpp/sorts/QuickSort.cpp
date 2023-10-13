@@ -1,17 +1,15 @@
 #include<iostream>
 #include<vector>
 
-using namespace std;
-
 
 class QuickSort{
 public:
-    void quickSort(vector<int> arr){
+    void quickSort(std::vector<int>& arr){
         int len = arr.size();
         quickInternallySort(arr, 0, len - 1);
     }
     
-    void quickInternallySort(vector<int> arr, int i, int j){
+    void quickInternallySort(std::vector<int>& arr, int i, int j){
         if(i >= j){
             return;
         }
@@ -20,7 +18,7 @@ public:
         quickInternallySort(arr, pos + 1, j);
     }
 
-    int partition(vector<int> arr, int i, int j){
+    int partition(std::vector<int>& arr, int i, int j){
         int val = arr[j];
         int l = i;
         int k = i;

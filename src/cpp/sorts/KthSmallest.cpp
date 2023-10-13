@@ -1,11 +1,9 @@
 #include<iostream>
 #include<vector>
 
-using namespace std;
-
 class KthSmallest{
 public:
-    int kthSmallest(vector<int> arr, int k){
+    int kthSmallest(std::vector<int>& arr, int k){
         int len  = arr.size();
         if(len < k){
             return -1;
@@ -23,7 +21,7 @@ public:
         return arr[pos];
     }
 
-    int partition(vector<int> arr, int k, int l){
+    int partition(std::vector<int>& arr, int k, int l){
         int j = k;
         for (int i = k; i < l; i++)
         {

@@ -1,10 +1,8 @@
 #include<vector>
 
-using namespace std;
-
 class Solution{
 public:
-    int binarySearch(vector<int> arr, int value){
+    int binarySearch(std::vector<int>& arr, int value){
         int len = arr.size();
         int low = 0;
         int high = len - 1;
@@ -24,7 +22,7 @@ public:
     }
 
     //寻找第一个等于给定值的索引
-    int binarySearch(vector<int> arr, int value){
+    int binarySearch(std::vector<int>& arr, int value){
         int len = arr.size();
         int low = 0;
         int high = len - 1;
@@ -51,7 +49,7 @@ public:
     }
 
     //寻找最后一个等于给定值的索引
-    int binarySearch(vector<int> arr, int value){
+    int binarySearch(std::vector<int>& arr, int value){
         int len = arr.size();
         int low = 0;
         int high = len - 1;
