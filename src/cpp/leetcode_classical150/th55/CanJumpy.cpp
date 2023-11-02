@@ -1,0 +1,19 @@
+#include<vector>
+#include<cmath>
+
+using namespace std;
+
+class Solution {
+public:
+    bool canJump(vector<int>& nums) {
+        int len = nums.size();
+        int k = 0;
+        for(int i = 0; i < len; i++){
+            if(i > k){
+                return false;
+            }
+            k = max(k, i + nums[i]);
+        }
+        return true;
+    }
+};
